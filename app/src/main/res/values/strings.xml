@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Poruči pile</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="imena">
+
+        <item>[nema unosa]</item>
+        <item>Danijela Karaklić</item>
+        <item>Nada Šiljegović</item>
+        <item>Aleksandar Aleksić</item>
+        <item>Bojan Batinić</item>
+        <item>Luka Stojić</item>
+        <item>Ivan Vojnović</item>
+        <item>Danijel Ćopić</item>
+        <item>Svetozar Zorbić</item>
+
+    </string-array>
+
+    <string-array name="kolicina">
+
+        <item>[nema unosa]</item>
+        <item>1 pile</item>
+        <item>2 pileta</item>
+        <item>3 pileta</item>
+        <item>4 pileta</item>
+        <item>Daj pet pilića!</item>
+        <item>Daj sve piliće!</item>
+        <item>Neću pile,hoću samo da te zajebavam!</item>
+
+
+    </string-array>
+
+
+    <string-array name="napomene">
+
+        <item>[nema unosa]</item>
+        <item>Odaberi mi sitnije piliće!</item>
+        <item>Odaberi mi krupnije piliće!</item>
+        <item>Pošalji mi žive piliće!</item>
+        <item>Pošalji mi zaklane piliće!</item>
+        <item>Ne kradi me na vagi!</item>
+        <item>Pošalji mi gajbu piva uz piliće!</item>
+        <item>Gori u paklu ubico životinja!</item>
+
+
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#d6e77b"
+    tools:context="studio.kucuela.porucipile.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="24dp"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:windowActionBarOverlay="false">
+
+        <!-- Toolbar is a standard toolbar for use within application content. -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+
+            android:elevation="24dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:elevation="15dp"
+
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="right|bottom"
+        fab:menu_fab_size="normal"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_openDirection="up">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/git"
+
+            fab:fab_label="Skoči na Github"
+            fab:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/muzika"
+            android:visibility="gone"
+            fab:fab_label="Upali/ugasi zvuk"
+            fab:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/muzika"
+            fab:fab_label="Upali/ugasi zvuk"
+
+            fab:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gmap"
+            app:fab_label="Lociraj pile (iz GoogleMaps-a)"
+
+
+            fab:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lokacija"
+            app:fab_label="Lociraj pile (iz aplikacije)"
+
+
+            fab:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/poruci"
+            fab:fab_label="Poruči pile"
+
+            fab:fab_size="mini"/>
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gif"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="-20dp"
+                android:elevation="10dp"
+                android:src="@drawable/gif2"/>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/gif"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="-20dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:elevation="0dp"
+                app:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+
+                    android:background="@color/cardview_light_background"
+
+                    android:padding="0dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/background_light"
+
+                        android:drawableLeft="@mipmap/pilence"
+
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_vertical"
+                        android:text="DOMAĆE PILE"
+                        android:textAlignment="inherit"
+
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/cardview_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView11"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="44dp"
+                        android:paddingRight="20dp"
+                        android:text="Domaća kokoš ili domaće pile (lat. Gallus gallus domesticus) je podvrsta ptice koja se često gaji kao živina.Poreklom je iz jugoistočne Azije.Ljudi uzgajaju piliće vekovima, ali mi smo ti koji su odgoj doveli do savršenstva! Kvalitet naše domaće piletine je garantovan.Naši pilići su hranjeni prirodnom hranom direktno iz naših ruku.Našim pilićima nikada nije prišla nijedna mašina.Naši pilići ne znaju za hemiju i nemaju ugrađene nikakve raspberry pi čipove u sebe.Naši pilići nisu oni nesrećni pilići iz matriksa koje svakodnevno srećete po prodavnicama i na to smo posebno ponosni."
+                        android:textAlignment="textStart"/>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/gif"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:elevation="0dp"
+                app:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+
+                    android:background="@color/cardview_light_background"
+
+                    android:padding="0dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView11x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/background_light"
+
+                        android:drawableLeft="@mipmap/cijena"
+
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_vertical"
+                        android:text="CENA / KOLIČINA"
+                        android:textAlignment="inherit"
+
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/cena"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/textView11x"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:text="250"/>
+
+                    <TextView
+                        android:id="@+id/kolicina"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/textView11x"
+                        android:layout_toRightOf="@id/cena"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="125dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:text="40"/>
+
+                    <TextView
+                        android:id="@+id/cena1"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/cena"
+
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:text="rsd/kg"/>
+
+                    <TextView
+                        android:id="@+id/kolicina1"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/kolicina"
+
+                        android:paddingLeft="213dp"
+
+
+                        android:layout_height="wrap_content"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:text="komada"/>
+
+
+
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/gif"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:elevation="0dp"
+                app:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+
+                    android:background="@color/cardview_light_background"
+
+                    android:padding="0dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/background_light"
+
+                        android:drawableLeft="@mipmap/kupiti"
+
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_vertical"
+                        android:text="KAKO PORUČITI"
+                        android:textAlignment="inherit"
+
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/cardview_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView11"
+                        android:layout_marginBottom="30dp"
+                        android:paddingBottom="18dp"
+                        android:paddingLeft="44dp"
+                        android:paddingRight="20dp"
+                        android:text="Nikad lakše.Ako vam nije daleko,svratite u selo Bukin kraj Bukinskog rita i lično preuzmite vaše piliće.Ako vam je daleko,sve što je potrebno da uradite je da kliknete na crveno dugme desno,odaberete opciju *poruči pile* i napravite porudžbinu.Naš kurir će Vam u rekordnom roku isporučiti živinu na kućnoj adresi.Kupovina pilića nikada nije bila jednostavnija."/>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
